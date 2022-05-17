@@ -13,22 +13,154 @@ body {
     width: 100%;
     height: 100vh;
 }
+h3 {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+img {
+    width: 100%;
+}
 a {
     text-decoration: none;
 }
+ul {
+    list-style: none;
+}
+li a {
+    color: #6e6e6e;
+    font-size: 11;
+    line-height: 30px;
+    font-weight: 700;     
+}
+li a .title-menu:hover, li a:hover, a .title-menu:hover, a .btn-hover:hover {
+    color: white;
+}
+.btn-icon-list i {
+    font-size: 40px;
+    color: #a3a3a3; 
+}
+.btn-icon-list i:hover {
+    color: white;
+}
 
-/* MAIN */
+/**** MAIN ****/
 main {
     display: flex;
     width: 100%;
     height: calc(100vh - 100px);
 }
+
+/* LEFT NAV */
 .left-nav {
     width: 250px;
     background-color: black;
     overflow: hidden;
     color: white;
+    display: flex;
+    flex-direction: column;
 }
+.container-left-nav {
+    padding: 5px 15px;
+    display: flex;
+}
+.left-nav li a {
+    padding-left: 10px;   
+}
+/* Logo */
+.logo {
+    width: 100%;
+    padding: 20px 10px;
+}
+.logo-large {
+    width: 150px;
+}
+.logo-small img {
+    display: none;
+    padding: 0;
+}
+/* Nav list 1 (Home-Cerca-Libreria) */
+.list-1 {
+    padding-bottom: 15px;
+}
+.list-item-menu {
+    display: flex;
+}
+.list-item-menu a {
+    color: #a3a3a3;
+}
+li.home-ico {
+    border-left: 2px solid yellow;
+}
+.icon img {
+    width: 25px;
+    height: 25px;
+    margin-right: 7px;
+}
+.title-menu {
+    width: calc(100% - 25px);
+    font-size: 13px;
+}
+
+/* Nav list 2 (Playlist) */
+.list-2 {
+    flex-grow: 1;
+}
+.btn-create-list{
+    font-size: 18px;
+}
+.list-2 h3 {
+    padding-left: 10px;
+}
+.list-2 ul {
+    overflow-y: auto;
+    height: 180px;
+}
+.btn-icon-list i {
+    width: 35px;
+    height: 35px;
+    background-color: #6e6e6e;
+    font-size: 20px;
+    text-align: center;
+    line-height: 35px;
+    margin: 10px 5px 10px 10px;
+    color: black;
+}
+.btn-icon-list i:hover {
+    background-color: white;
+    color: black;
+}
+/* Nav list 3 (Install app-Name Profile) */
+.list-3 {
+    padding: 0 10px; 
+}
+.btn-app {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #a3a3a3;
+}
+.btn-profile {
+    padding: 5px 0;
+    align-items: center;
+}
+.icon-download img {
+    width: 20px;
+    height: 20px;    
+    margin-right: 7px;
+    border-radius: 50%;
+}
+.icon-profile img {
+    width: 25px;
+    height: 25px;
+    margin-right: 7px;
+    padding: 2px;
+    border-radius: 50%;
+    background-color: #6e6e6e;   
+}
+a .title-menu {
+    color: #a3a3a3;
+}
+
+/* CONTENT MAIN */
 .main-content {
     width: calc(100% - 250px);
     background-color: #141922;
@@ -37,7 +169,7 @@ main {
     color: white;
 }
 
-/* FOOTER */
+/**** FOOTER ****/
 footer {
     width: 100%;
     height: 100px;
@@ -46,7 +178,7 @@ footer {
     overflow: hidden;
 }
 
-/* BANNER TOP */
+/**** BANNER TOP ****/
 .banner-top {
     width: calc(100% - 250px);
     height: 100px;
@@ -54,8 +186,7 @@ footer {
     color: white;
     position: fixed;
     top: 0;
-    right: 0;
-    
+    right: 0;   
 }
 .btn-upgrade {
     display: flex;
@@ -69,7 +200,7 @@ footer {
     color: white;
     text-transform: uppercase;
     border: 1px solid white;
-    padding: 15px 50px;
+    padding: 10px 40px;
     border-radius: 30px;
 }
 .btn-upgrade a:hover {
@@ -90,16 +221,73 @@ footer {
     MOBILE SMALL
  ******************/
 @media screen and (max-width: 600px) {
-    /* MAIN */
+    /**** MAIN ****/
     .left-nav {
-        width: 60px;
+        width: 50px;
     }
     .main-content {
-        width: calc(100% - 60px);
+        width: calc(100% - 50px);
     }
+
+    /* LEFT NAV */
+    .left-nav li a {
+        padding-left: 0;
+    }
+    .list-item-menu {
+        display: flex;
+        justify-content: center;
+    }
+    /* Logo */
+    .logo {
+        padding: 10px;
+    }
+    .logo-large {
+        display: none;
+    }
+    .logo .logo-small img {
+        width: 95%;
+        display: flex;
+        justify-content: center;
+    }
+    /* Nav list 1 (Home-Cerca-Libreria) */
+    .list-1 {
+        flex-grow: 1;
+    }
+    .title-menu {
+        display: none;
+    }
+    .icon img {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        justify-content: center;
+        margin-right: 0px; 
+        padding: 0;   
+    }
+    li.home-ico {
+        border-left: none;
+    }
+    /* Nav list 2 (Playlist) */
+    .list-2 {
+        display: none;
+    }
+    /* Nav list 3 (Install app-Name Profile) */
+    .icon-download img,.icon-profile img {
+        display: inline-block;
+        justify-content: center;
+        margin-right: 0px;    
+    }
+    .btn-app {
+        border: none;
+    }
+    .icon-profile img {
+        width: 20px;
+        height: 20px; 
+    }
+
 
     /* BANNER TOP */
     .banner-top {
-        width: calc(100% - 60px);
+        width: calc(100% - 50px);
     }
-}
+}   
