@@ -30,6 +30,8 @@ h3 {
 }
 img {
     width: 100%;
+    margin: 0 auto;
+    display: block;
 }
 a {
     text-decoration: none;
@@ -191,8 +193,13 @@ a .title-menu {
     padding: 5px 10px;
     text-transform: uppercase;
 }
-
+.row-menu-category {
+    width: 30px;
+    height: 2px;
+    background-color: yellow;
+}
 /* END Menu player Category */
+
 /* Content Played */
 .content-play-list {
     padding: 10px;
@@ -219,6 +226,7 @@ a .title-menu {
 }
 .card-play h2 {
     font-size: 20px;
+    padding-top: 20px;
 }
 .content-play-list h3, .card-play h3 {
     font-size: 12px;
@@ -226,8 +234,34 @@ a .title-menu {
     text-transform: none;
     padding-bottom: 10px;
 }
+.circle-play {
+}
 .circle-play img {
     border-radius: 50%;
+}
+.container-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.container-img img {
+    object-fit: cover;
+}
+ .container-img:hover .overlay {
+    opacity: 1;
+}  
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 50px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    overflow: hidden;
 }
 /* END Content Played */
 /* END CONTENT MAIN */
@@ -290,7 +324,7 @@ footer {
         width: calc(100% / 2 );
     }
 }
-
+              
 /******************
     MOBILE SMALL
  ******************/
