@@ -8,10 +8,20 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* DEBUG */
+/* .content-play-list {
+    background-color: pink;
+} */
+
+
+
 /* COMMON */
 .app-wrapper {
     width: 100%;
     height: 100vh;
+}
+.flex {
+    display: flex;
 }
 h3 {
     font-size: 16px;
@@ -168,6 +178,59 @@ a .title-menu {
     padding-top: 120px;
     color: white;
 }
+/* Menu player Category */
+.nav-menu-play-category {
+    padding: 10px 0 20px 0;
+}
+.menu-category {
+    text-transform: uppercase;
+    justify-content: center;
+}
+.menu-category a {
+    font-size: 14px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+
+/* END Menu player Category */
+/* Content Played */
+.content-play-list {
+    padding: 10px;
+}
+.content-play-list h2 {
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.list-row {
+    flex-wrap: wrap;
+    align-self: flex-start;
+    margin-left: -5px;
+    margin-right: -5px;  
+}
+.list-col {
+    width: calc(100% / 6 );
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+}
+.card-play {
+    text-align: center;
+    padding-top: 20px;
+}
+.card-play h2 {
+    font-size: 20px;
+}
+.content-play-list h3, .card-play h3 {
+    font-size: 12px;
+    color: #a3a3a3;
+    text-transform: none;
+    padding-bottom: 10px;
+}
+.circle-play img {
+    border-radius: 50%;
+}
+/* END Content Played */
+/* END CONTENT MAIN */
 
 /**** FOOTER ****/
 footer {
@@ -210,12 +273,23 @@ footer {
 /*************
     TABLET
 *************/
+@media screen and (max-width: 1100px) {
+    /* CONTENT MAIN */
+    .list-col {
+        width: calc(100% / 4 );
+    }
+}
 
 
  /************
     MOBILE
 *************/
-
+@media screen and (max-width: 700px) {
+    /* CONTENT MAIN */
+    .list-col {
+        width: calc(100% / 2 );
+    }
+}
 
 /******************
     MOBILE SMALL
